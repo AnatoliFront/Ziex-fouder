@@ -305,13 +305,13 @@ body {
     .line_section {
       height: 4px;
       position: absolute;
-      width: 100%;
+      width: 0;
     }
 
     .line {
       height: 4px;
       background-color: #2a52be;
-      max-width: 0;
+      max-height: 0;
       width: 100%;
       transition: all 1s ease;
     }
@@ -514,14 +514,13 @@ body {
 
       .line_section {
         width: 4px;
-        max-height: 100%;
-        height: 100%;
+        max-height: initial;
+        height: 0;
       }
 
       .line {
         max-width: initial;
         width: 4px;
-        max-height: 0;
         height: 100%;
       }
     }

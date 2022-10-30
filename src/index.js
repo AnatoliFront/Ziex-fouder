@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   const switchPages = () => {
     scrollingIsActive = true
-    transformValue = -1 * window.innerHeight * activeScreen
+    transformValue = -1 * screens[activeScreen].offsetHeight * activeScreen
     screens.forEach(i => i.classList.remove('active'))
     screens[activeScreen].classList.add('active')
     mainSlider.style.transform = `translate3d(0,${transformValue}px,0)`
