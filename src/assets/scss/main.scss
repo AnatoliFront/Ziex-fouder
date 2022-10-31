@@ -311,8 +311,8 @@ body {
     .line {
       height: 4px;
       background-color: #2a52be;
-      max-height: 0;
       width: 100%;
+      max-width: 0;
       transition: all 1s ease;
     }
 
@@ -354,6 +354,26 @@ body {
   100% {
     transform: scale(1.1);
     opacity: 0;
+  }
+}
+
+.preloader {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000000000;
+
+  span {
+    font-size: 50px;
+    animation: pulse 1.5s linear infinite;
+  }
+
+  &.hidden {
+    display: none;
   }
 }
 
@@ -494,9 +514,11 @@ body {
   .main_title {
     padding: 10px 20px;
   }
+
   .feedback_form {
     max-width: 90%;
   }
+
   .roadmap {
     flex-direction: column;
     width: 100%;
@@ -521,6 +543,8 @@ body {
       .line {
         max-width: initial;
         width: 4px;
+        max-height: 0;
+
         height: 100%;
       }
     }

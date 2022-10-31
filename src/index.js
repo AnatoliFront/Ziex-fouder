@@ -15,10 +15,15 @@ document.addEventListener('DOMContentLoaded', function () {
   //PAGE SLIDER
   const screens = qsa('.main_screen')
   const mainSlider = qs('.main_slider')
+  mainSlider.style.transform = `translate3d(0, -5100px,0)`
+  setTimeout(() => {
+    mainSlider.style.transform = `translate3d(0, 0,0)`
+  },1000)
+  setTimeout(() => {qs('.preloader').classList.add('hidden')}, 2000)
   const navSlider = qsa('.navigation_dot')
   let activeScreen = 0
   let scrollingIsActive = false
-  let scrollingTime = 1800
+  let scrollingTime = 1600
   let transformValue = 0
   let stopScroll = false
   let roadMapDone = false
